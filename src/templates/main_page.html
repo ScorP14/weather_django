@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row">
+    <section class="py-5 text-center container">
+    </section>
+    <div class="container">
+        <div class="col">
+            <label>
+                <input class="search_input" type="text" name="search_content" placeholder="Укажите город">
+                <input type="button" value="Найти" onclick="search_generate_url()">
+            </label>
+        </div>
+    </div>
+     <div class="col"><p class="h2 text-center">Погода в: {{ city.name | title }} (№{{city.id}})</p></div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col"> Время</div>
+        <div class="col"> Температура</div>
+        <div class="col"> Давление</div>
+        <div class="col"> Скорость</div>
+        <div class="col"> Влажность</div>
+    </div>
+    {% if not error %}
+        {% for date, temp in data.items %}
+            <p class="text-start mt-4 mb-0">{{date}}</p>
+            {% for k, i in temp.items %}
+                <div class="row">
+                    <div class="col">{{i.str_dey}}</div>
+                    <div class="col"> {{i.temp}} С°</div>
+                    <div class="col"> {{i.pressure}} мм. рт.</div>
+                    <div class="col"> {{i.speed}} м/с {{i.direction_speed | upper}}</div>
+                    <div class="col">{{i.humidity}}%</div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+    {% else %}
+        {{error}}
+    {% endif %}
+</div>
+{% endblock %}
