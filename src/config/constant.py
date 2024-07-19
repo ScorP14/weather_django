@@ -8,7 +8,7 @@ from .settings import BASE_DIR
 
 class ConstantFromEnv(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=Path(BASE_DIR / '.env'),
+        env_file=Path(BASE_DIR / '../.env'),
         extra='allow',
     )
 
