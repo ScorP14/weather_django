@@ -3,8 +3,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      args:
-        OPENWEATHERMAP_API_KEY: "SECRET_KEY"
+    environment:
+      - OPENWEATHERMAP_API_KEY
     container_name: main-app
     ports:
       - "8000:8000"
