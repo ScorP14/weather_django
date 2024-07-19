@@ -17,6 +17,7 @@ COPY . ./
 
 ENV DJANGO_SETTINGS_MODULE=config.settings
 
+
 RUN python src/manage.py migrate
 
 EXPOSE 8000
