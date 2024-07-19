@@ -11,7 +11,7 @@ COPY requirements.txt /src/
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . /src/
+COPY . ./
 
 ENV DJANGO_SETTINGS_MODULE=config.settings
 
