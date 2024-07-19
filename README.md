@@ -28,4 +28,9 @@
    ```bash
    sudo docker-compose up
 
-4. **Перейти на localhost:8000**
+4. **Перейти на <http://localhost:8000>**
+
+## Скриншоты
+
+![Текст описания](screenshots/1.png)
+![Текст описания](screenshots/2.png)
