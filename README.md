@@ -13,8 +13,19 @@
 - ~~при повторном посещении сайта будет предложено посмотреть погоду в городе, в котором пользователь уже смотрел ранее~~
 - ~~будет сохраняться история поиска для каждого пользователя, и будет API, показывающее сколько раз вводили какой город~~
 
+## Как использовать
 
-clone git
+1. **Клонировать репозиторий:**
 
-cd weather_django
-sudo docker-compose up
+   ```bash
+   git clone https://github.com/ScorP14/weather_django.git
+   cd your_repository
+
+2. **Переименовать файл .env_exemple в .env и заполнить ключ к API OpenWeatherMap.**
+
+3. **Запустить Docker контейнер командой:**
+
+   ```bash
+   sudo docker-compose up
+
+4. **Перейти на localhost:8000**
