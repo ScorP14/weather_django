@@ -7,7 +7,10 @@ from .settings import BASE_DIR
 
 
 class ConstantFromEnv(BaseSettings):
-    model_config = SettingsConfigDict(env_file=Path(BASE_DIR / '.env'))
+    model_config = SettingsConfigDict(
+        env_file=Path(BASE_DIR / '.env'),
+        extra='allow',
+    )
 
     owm_api_key: str = Field(alias='OPENWEATHERMAP_API_KEY')
 
